@@ -1,0 +1,15 @@
+  agent any
+    
+    stages {
+        stage('Show OS and Working Directory') {
+            steps {
+                script {
+                    def osName = System.getProperty('os.name')
+                    def pwd = pwd()
+                    echo "Operating System: ${osName}"
+                    echo "Present Working Directory: ${pwd}"
+                }
+            }
+        }
+    }
+}
